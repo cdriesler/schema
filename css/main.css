@@ -66,10 +66,7 @@ body {
 .nav {
 	position:absolute;
     bottom: 15px;
-    left: 28vw;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
 	font-size: 1.5vw;
@@ -77,10 +74,12 @@ body {
 }
 
 .nav-author {
-	display: block;
+	display: relative;
+		
 	font-weight: normal;
 	margin: 0px;
 	padding-top: .4vw;
+	margin-left: 27vw;
 	color: white;
 	text-align: center;
 	
