@@ -26,14 +26,19 @@ a.bracket-link:hover {
 	font-weight: normal;
 }
 
+a.nav-link:link {
+	text-decoration : none;
+}
+
 body {
 	background-color: white;
+	color: black;
 }
 
 .main-title {
     position: absolute;
     top: 32vh;
-    left: 27vw;
+    left: 23.75vw;
 
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
@@ -50,7 +55,7 @@ body {
 .main-subtitle {
     position: absolute;
     top: 50vh;
-    left: 27vw;
+    left: 23.75vw;
 
 	font-family: 'Inconsolata', monospace;
 	
@@ -73,27 +78,130 @@ body {
 	text-align:left;
 }
 
+.nav-action-left {
+	position: absolute;
+	
+	margin: 0px;
+	margin-left: 8vw;
+	padding: 0px;
+	
+	transform: translateY(10px);
+
+	font-family: 'Inconsolata', monospace;
+	font-weight: normal;
+	font-size: 1.5vw;
+	text-align:left;
+	color: grey;
+	vertical-align: bottom;
+}
+
+.nav-action-right {
+	position: relative;
+	
+	margin-left: 9vw;
+	padding-left: 0px;
+	
+	transform: translateY(10px);
+
+	font-family: 'Inconsolata', monospace;
+	font-weight: normal;
+	font-size: 1.5vw;
+	text-align: center;
+	color: grey;
+	vertical-align: center;
+}
+
 .nav-author {
-	display: relative;
+	position: relative;
+	display: inline-block;
+	
+	transform: translateY(.12vw);
 		
 	font-weight: normal;
 	margin: 0px;
 	padding-top: .4vw;
-	margin-left: 27vw;
+	margin-left: 23.75vw;
 	color: white;
 	text-align: center;
+	vertical-align: top;
 	
 	width: 2.5vw;
 	height: 2.1vw;
 	background-color: black;
 }
 
-.nav-project-schema {
+.nav-divider {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
 	
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-top: .4vw;
+	width: .25vw;
+	height: 2.1vw;
+	
+	background-color: black;
+}
+
+.nav-endcap {
+	position: relative;
+    display: inline-block;
+	vertical-align: middle;
+	
+	margin-left: 31.5vw;
+	margin-right: 0px;
+	padding-top: .4vw;
+	padding-right: 0;
+	width: .25vw;
+	height: 2.1vw;
+	
+	background-color: black;
+}
+
+.nav-project-schema {
+	position: relative;
+	display: inline-block;
+		
+	font-weight: normal;
+	margin: 0px;
+	padding-top: .4vw;
+	color: black;
+	text-align: center;
+	vertical-align: middle;
+	
+	width: 2.5vw;
+	height: 2.1vw;
+	background-color: white;
+	
+	outline-style: solid;
+	outline-color: black;
+	outline-width: 2px;
+	outline-offset: -2px;
+
 }
 
 .nav-project-plugin {
+	position: relative;
+	display: inline-block;
+		
+	font-weight: normal;
+	margin: 0px;
+	padding-top: .4vw;
+	color: black;
+	text-align: center;
+	vertical-align: middle;
 	
+	width: 2.5vw;
+	height: 2.1vw;
+	background-color: white;
+	
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+		
+	-moz-border-radius: 50%;
+	border-radius: 50%;
 }
 
 /*
