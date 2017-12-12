@@ -1,0 +1,41 @@
+a.bracket-link:link {
+	text-decoration : none; 
+	color: darkgrey;
+	
+	-o-transition:.5s;
+  	-ms-transition:.5s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.5s;
+  	transition:.5s;
+}
+
+a.bracket-link:hover {
+	color: black;
+}
+
+.main-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+	font-family: 'Inconsolata', monospace;
+	font-weight: bold;
+	font-size: 6em;
+	color: white;
+	
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+}
+
+.main-subtitle {
+    position: absolute;
+    top: 72%;
+    left: 28%;
+	text-align: left;
+
+	font-family: 'Inconsolata', monospace;
+	font-size: 1.13em;
+	color: black;
+}
