@@ -1,6 +1,6 @@
 a.bracket-link:link {
 	text-decoration : none; 
-	color: darkgrey;
+	color: grey;
 	font-weight: normal;
 	
 	-o-transition:color .5s;
@@ -11,7 +11,7 @@ a.bracket-link:link {
 }
 
 a.bracket-link:visited {
-	color: darkgrey;
+	color: grey;
 	font-weight: normal;
 
 	-o-transition:color .5s;
