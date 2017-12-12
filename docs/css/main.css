@@ -35,10 +35,19 @@ body {
 	color: black;
 }
 
+img.splash {
+	z-index: 0;
+	width: 90vh;
+	height: 90vh;
+	vertical-align: middle;
+	opacity: 100;
+	
+}
+
 .main-title {
     position: absolute;
     top: 32vh;
-    left: 23.75vw;
+    left: 26.75vw;
 
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
@@ -55,7 +64,7 @@ body {
 .main-subtitle {
     position: absolute;
     top: 50vh;
-    left: 23.75vw;
+    left: 26.75vw;
 
 	font-family: 'Inconsolata', monospace;
 	
@@ -82,7 +91,7 @@ body {
 	position: absolute;
 	
 	margin: 0px;
-	margin-left: 8vw;
+	margin-left: 10vw;
 	padding: 0px;
 	
 	transform: translateY(10px);
@@ -120,7 +129,7 @@ body {
 	font-weight: normal;
 	margin: 0px;
 	padding-top: .4vw;
-	margin-left: 23.75vw;
+	margin-left: 26.75vw;
 	color: white;
 	text-align: center;
 	vertical-align: top;
