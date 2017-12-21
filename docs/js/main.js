@@ -35,7 +35,7 @@ function hideAuthor() {
 	"use strict";
 	
 	var oldTitle = document.getElementById("feature-title").textContent.substr(0, 11);
-	var newTitle = "S C H E M A";
+	var newTitle = "S Y S T E M";
 	
 	if (blocker_1 === 1) {
 		setTimeout(hideAuthor, 400);
@@ -68,7 +68,7 @@ function showAuthorSub() {
 	
 	var existingText = document.getElementById("feature-subtitle").textContent;
 	var oldTitle = existingText;
-	var newTitle = "projects by chuck driesler, published under the [GNU GPL]";
+	var newTitle = "projects by chuck driesler published under the [ GNU GPL ]";
 	
 	if (blocker_2 === 1) {
 		setTimeout(showAuthorSub, 400);
@@ -84,7 +84,7 @@ function hideAuthorSub() {
 	
 	var existingText = document.getElementById("feature-subtitle").textContent;
 	var oldTitle = existingText;
-	var newTitle = "[free software] experiments re: automation and architecture";
+	var newTitle = "[ free software ] experiments re : automation and architecture";
 	
 	if (blocker_2 === 1) {
 		setTimeout(hideAuthorSub, 400);
@@ -112,10 +112,10 @@ function updateSubTitle(index, newTitle, oldTitle, state) {
 		blocker_2 = 0;
 		//alert(state);
 		if (state === 1) {
-			document.getElementById("feature-subtitle").innerHTML = "projects by chuck driesler, published under the [GNU GPL]";
+			document.getElementById("feature-subtitle").innerHTML = "projects by chuck driesler published under the [ GNU GPL ]";
 		}
 		else if (state === 0) {
-			document.getElementById("feature-subtitle").innerHTML = '<a class="bracket-link" href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html#content" target="_blank">[free software]</a> experiments re: automation and architecture';
+			document.getElementById("feature-subtitle").innerHTML = '<a class="bracket-link" href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html#content" target="_blank">[ free software ]</a> experiments re: automation and architecture';
 		}
 	}
 }

@@ -136,16 +136,6 @@ splash {
 	font-weight: normal;
 }
 
-.nav {
-	position:absolute;
-    bottom: 15px;
-
-	font-family: 'Inconsolata', monospace;
-	font-weight: bold;
-	font-size: 1.5vw;
-	text-align:left;
-}
-
 .nav-action {	
 	position: absolute;
 	margin: 0;
@@ -194,16 +184,27 @@ splash {
 	vertical-align: center;
 }
 
+.nav {
+	position:absolute;
+	width: 60%;
+    bottom: 15px;
+
+	font-family: 'Inconsolata', monospace;
+	font-weight: bold;
+	font-size: 1.5vw;
+	text-align:left;
+}
+
 .nav-author {
 	position: relative;
 	display: inline-block;
-	
-	transform: translateY(.12vw);
+	padding-top: .4vw;
 		
 	font-weight: normal;
-	margin: 0px;
-	padding-top: .4vw;
-	margin-left: 26.75vw;
+	margin: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 10%;
 	color: white;
 	text-align: center;
 	vertical-align: top;
@@ -216,13 +217,16 @@ splash {
 .nav-divider {
 	position: relative;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
+	text-align: center;
 	
-	margin-left: 5px;
-	margin-right: 5px;
-	padding-top: .4vw;
+	margin-top: 0px;
+	margin-bottom: 0px;
+		
+	margin-left: 2px;
+	margin-right: 2px;
 	width: .25vw;
-	height: 2.1vw;
+	height: 2.5vw;
 	
 	background-color: black;
 }
@@ -247,11 +251,13 @@ splash {
 	display: inline-block;
 		
 	font-weight: normal;
-	margin: 0px;
+	margin: 2px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 	padding-top: .4vw;
 	color: black;
 	text-align: center;
-	vertical-align: middle;
+	vertical-align: top;
 	
 	width: 2.5vw;
 	height: 2.1vw;
