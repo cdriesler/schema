@@ -10,7 +10,7 @@ function splashFadeIn(index) {
 	"use strict";
 	
 	var vid = document.getElementById(splash_ids[parseInt(index)]);
-	vid.style.visibility = "visible";
+	vid.style.display = "inherit";
 	
 	var opacity = vid.style.opacity;
 	
@@ -51,7 +51,7 @@ function splashFadeOut(index) {
 	}
 	else {
 		C = 0;
-		vid.style.visibility = "hidden";
+		vid.style.display = "none";
 	}
 	
 	vid.style.opacity = opacity;
