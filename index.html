@@ -8,6 +8,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
 		
 		<script src="docs/js/main.js"></script>
+		<script src="docs/js/splash.js"></script>
 		<title></title>
     </head>
     <body>
@@ -21,10 +22,16 @@
 		
 		<div class="column middle">
 			<center>
-			<!-- <img class="splash" id="eponym_splash" src="docs/img/splash images/eponym_splash.png" alt="eponym"> -->
-			<video class="splash" id="maison_splash" autoplay="autoplay" loop="Loop" style="opacity:0;">
-				<source src="docs/img/splash images/maison_splash.mp4" type="video/mp4">
-			</video>
+				<span class="splash-video">
+					<!-- <img id="eponym_splash" src="docs/img/splash images/eponym_splash.png" alt="eponym" style="opacity:0;"> -->
+					<video id="maison_splash" autoplay="autoplay" loop="Loop" style="opacity:0;">
+						<source src="docs/img/splash images/maison_splash.mp4" type="video/mp4">
+					</video>
+					
+					<video id="eponym_splash" autoplay="autoplay" loop="Loop" style="opacity:0;">
+						<source src="docs/img/splash images/maison_splash.mp4" type="video/mp4">
+					</video>
+				</span>
 			</center>
 			
 			<div class="main-title" id="feature-title">
@@ -40,10 +47,10 @@
 				CD
 				</span>
 				<span class="nav-divider"></span>
-				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('M A I S O N');" onMouseOut="hideAuthorOverlay();">
+				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('M A I S O N');splashFadeIn(0);" onMouseOut="hideAuthorOverlay();splashFadeOut(0);">
 				00
 				</span>
-				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('E P O N Y M');" onMouseOut="hideAuthorOverlay();">
+				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('E P O N Y M');splashFadeIn(1);" onMouseOut="hideAuthorOverlay();splashFadeOut(1);">
 				01
 				</span>
 			</div>
