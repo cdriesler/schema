@@ -16,6 +16,9 @@
 	
 	margin: 0;
 	padding: 0;
+	
+	outline: solid black 4px;
+	outline-offset: 8px;
 }
 
 .middle {
@@ -99,12 +102,12 @@ splash {
 
 .main-title {
     position: absolute;
-    top: 32vh;	
+    top: 32vh;
+	left: 26%;
 	margin: 0;
 	padding: 0;
 	
 	width: 60%;
-	text-align: center;
 
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
@@ -113,18 +116,18 @@ splash {
 	-webkit-text-fill-color: transparent;
 	color: transparent;
 	
-	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-width: 4px;
 	-webkit-text-stroke-color: black;
 }
 
 .main-subtitle {
     position: absolute;
     top: 50vh;	
+	left: 26%;
 	margin: 0;
 	padding: 0;
 	
 	width: 60%;
-	text-align: center;
 	
 	font-family: 'Inconsolata', monospace;
 	
@@ -158,7 +161,7 @@ splash {
 	margin-left: 10vw;
 	padding: 0px;
 	
-	transform: translateY(10px);
+	transform: translateY(25px);
 
 	font-family: 'Inconsolata', monospace;
 	font-weight: normal;
@@ -174,7 +177,7 @@ splash {
 	margin-left: 9vw;
 	padding-left: 0px;
 	
-	transform: translateY(10px);
+	transform: translateY(25px);
 
 	font-family: 'Inconsolata', monospace;
 	font-weight: normal;
@@ -204,7 +207,7 @@ splash {
 	margin: 5px;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	margin-left: 10%;
+	margin-left: 10.5%;
 	color: white;
 	text-align: center;
 	vertical-align: top;
@@ -265,8 +268,8 @@ splash {
 	
 	outline-style: solid;
 	outline-color: black;
-	outline-width: 2px;
-	outline-offset: -2px;
+	outline-width: 4px;
+	outline-offset: -4px;
 
 }
 
@@ -295,6 +298,14 @@ splash {
 
 .splash-video {
 	display: inline-block;
+	vertical-align: middle;
+	
+	margin: 0;
+	padding: 0;
+
+	height: 100vh;
+	
+	transform: translateY(-4vh);
 }
 
 /*
