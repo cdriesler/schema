@@ -32,6 +32,10 @@
 						<source src="docs/img/splash images/eponym_splash.mp4" type="video/mp4">
 					</video>
 					
+					<video id="debug_splash" autoplay="autoplay" loop="Loop" style="opacity:0; display:none;">
+						<source src="docs/img/splash images/debug_splash.mp4" type="video/mp4">
+					</video>
+					
 					<!--
 					<img id="eponym_splash" src="docs/img/splash images/eponym_splash.png" alt="eponym" style="opacity:0; display:none;">
 					-->
@@ -59,7 +63,7 @@
 				01
 				</span>
 				<span class="nav-divider"></span>
-				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('N A T A L U S');" onMouseOut="hideAuthorOverlay();">
+				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('N A T A L U S');splashFadeIn(2);" onMouseOut="hideAuthorOverlay();splashFadeOut(2);">
 				N
 				</span>
 			</div>

@@ -107,11 +107,12 @@ splash {
 	margin: 0;
 	padding: 0;
 	
-	width: 60%;
+	width: 200vw;
 
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
 	font-size: 8.5vw;
+	overflow-x: hidden;
 	
 	-webkit-text-fill-color: transparent;
 	color: transparent;
@@ -129,7 +130,7 @@ splash {
 	padding-bottom: 20px;
 	padding-right: 100vw;
 	
-	width: 60%;
+	width: 200vw;
 	
 	font-family: 'Inconsolata', monospace;
 	
@@ -303,11 +304,14 @@ splash {
 .splash-video {
 	display: inline-block;
 	vertical-align: middle;
+	object-fit: cover;
 	
 	margin: 0;
 	padding: 0;
-
-	height: 100vh;
+	
+	min-height: 100%;
+	
+	overflow: hidden;
 	
 	transform: translateY(-4vh);
 }

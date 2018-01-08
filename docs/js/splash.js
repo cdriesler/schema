@@ -2,7 +2,7 @@
 // 00 - maison_splash
 // 01 - eponym_splash
 
-var splash_ids = ["maison_splash", "eponym_splash"];
+var splash_ids = ["maison_splash", "eponym_splash", "debug_splash"];
 
 var C = 0; //opacity increase continuation token
 
