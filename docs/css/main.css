@@ -1,6 +1,11 @@
+.html {
+	overflow-x: hidden;
+}
+
 .body {
 	margin: 0;
 	padding: 0;
+	
 }
 
 .column {
@@ -154,42 +159,43 @@ splash {
 	text-align: center;
 	
 	font-family: 'Inconsolata', monospace;
-	font-weight: bold;
-	font-size: 2.7vw;
+	font-weight: normal;
+	font-size: 2vw;
 	color: grey;
 }
 
 .nav-action-left {
 	position: absolute;
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+	padding-left: 0.5%;
+	bottom: 10px;
 	
-	margin: 0px;
-	margin-left: 10vw;
-	padding: 0px;
+	width: 20%;
+	text-align: center;
 	
-	transform: translateY(25px);
-
+	border-top: solid black 4px;
+	
 	font-family: 'Inconsolata', monospace;
 	font-weight: normal;
-	font-size: 2.5vw;
-	text-align:left;
+	font-size: 2vw;
 	color: grey;
-	vertical-align: bottom;
 }
 
 .nav-action-right {
-	position: relative;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	bottom: 10px;
 	
-	margin-left: 9vw;
-	padding-left: 0px;
+	width: 20%;
+	text-align: center;
 	
-	transform: translateY(25px);
-
 	font-family: 'Inconsolata', monospace;
 	font-weight: normal;
-	font-size: 2.5vw;
-	text-align: center;
+	font-size: 2vw;
 	color: grey;
-	vertical-align: center;
 }
 
 .nav {
