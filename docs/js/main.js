@@ -125,3 +125,16 @@ function setCharAt(currentTitle,index,chr) {
 	//alert(currentTitle.substr(0,index) + chr + currentTitle.substr(index+1));
     return currentTitle.substr(0,index) + chr + currentTitle.substr(index+1);
 }
+
+function toggleMotiveVis(state) {
+	"use strict";
+	
+	var button = document.getElementById("motive-button");
+	
+	if (state === 0) {
+		button.style.opacity = 0;
+	}
+	else if (state === 1) {
+		button.style.opacity = 1;
+	}
+}

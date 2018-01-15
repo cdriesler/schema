@@ -9,6 +9,7 @@
 		
 		<script src="docs/js/main.js"></script>
 		<script src="docs/js/splash.js"></script>
+		<script src="docs/js/debug.js"></script>
 		<title></title>
     </head>
     <body>
@@ -43,7 +44,7 @@
 				</span>
 			</center>
 			
-			<div class="main-title" id="feature-title">
+			<div class="main-title" id="feature-title" >
 			S Y S T E M
 			</div>
 			
@@ -51,27 +52,80 @@
 				<a class="bracket-link" href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html#content" target="_blank" style="color:grey">[ free software ]</a> experiments re : automation and architecture
 			</div>
 			
+			<div class="body-text" id="motive_text" style="opacity:0; display:none;">
+				this is where I publish my experiments and systems for automated design.
+				<br><br>
+				each one should allow you to create something through participation and deliver a basic set of documentation + animations for your result.
+				<br><br>
+				the computers will figure out architecture some day.
+				<br><br>
+				if they can already do [ this ], why not space? <br>
+				maybe you believe what they simulate isn’t real. <br>
+				but [ if you can’t tell the difference, does it matter? ]
+				<br><br>
+				until then, I’m an architecture student attempting to automate myself out of a future in architecture.
+				<br><br>
+				all projects are free software and shared on my [ github ]
+				<br><br><br>
+				<a class="nav-link" onClick="splashFadeOut(3); toggleMotiveVis(1);" style="cursor: pointer; color: grey;">
+					[ close ]
+				</a>
+				<a class="nav-link" onClick="splashFadeOut(4);" style="cursor: pointer; color: grey;">
+					[ verbose ]
+				</a>
+			</div>
+			
+			<div class="body-text" id="napkin_manifesto" style="opacity:0; display:none;">
+				designing open systems, <br>
+				instead of static objects, <br>
+				undermines the authority of the architect in architecture. 
+				<br><br>
+				the last word on [ design ] <br>
+				no longer belongs to [ the designer ]
+				<br><br>
+				if we design patterns and parameters for space, <br>
+				the designed product is a debate, not an imposition. <br>
+				so language becomes critical:
+				<br><br>
+				“I” can’t articulate my concept of [ domestic mutations ] <br>
+				but “I” can still make a [ home ]
+				<br><br>
+				automation is the tool for persistent translation. <br>
+				participation, subversive or passive, shapes environment, <br>
+				so why limit creation to the architect? <br>
+				we can be diplomats instead of dictators! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class="nav-link" onClick="splashFadeOut(5); toggleMotiveVis(1);" style="cursor: pointer; color: grey;">
+					[ ok, chuck ]
+				</a>
+			</div>
+			
 			<div class="nav">
-				<span class="nav-author" onMouseOver="makeAuthorOverlay('S C H E M A');" onMouseOut="hideAuthorOverlay();">
+				<span class="nav-author" onMouseOver="makeAuthorOverlay('S C H E M A');" onMouseLeave="hideAuthorOverlay();">
 				//
 				</span>
 				<span class="nav-divider"></span>
-				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('M A I S O N');splashFadeIn(0);" onMouseOut="hideAuthorOverlay();splashFadeOut(0);">
-				00
+				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('M A I S O N');splashFadeIn(0);" onMouseLeave="hideAuthorOverlay();splashFadeOut(0);">
+					<a class="nav-link" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='grey'" onClick="debugAlert('system not yet implemented!'); toggleDetailBar(0, 0);" style="cursor: pointer; color: grey;">
+					00
+					</a>
 				</span>
-				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('E P O N Y M');splashFadeIn(1);" onMouseOut="hideAuthorOverlay();splashFadeOut(1);">
-				01
+				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('E P O N Y M');splashFadeIn(1);" onMouseLeave="hideAuthorOverlay();splashFadeOut(1);">
+					<a class="nav-link" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='grey'" onClick="debugAlert('system not yet implemented!'); toggleDetailBar(0, 1); " style="cursor: pointer; color: grey;">
+					01
+					</a>
 				</span>
 				<span class="nav-divider"></span>
-				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('N A T A L U S');splashFadeIn(2);" onMouseOut="hideAuthorOverlay();splashFadeOut(2);">
-				N
+				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('N A T A L U S');splashFadeIn(2);" onMouseLeave="hideAuthorOverlay();splashFadeOut(2);">
+					<a class="nav-link" href="http://www.grasshopper3d.com/group/natalus" target="_blank">
+					N
+					</a>
 				</span>
 			</div>
 		</div>
 		
 		<div class="column right">
 			<span class="nav-action-right">
-				<a class="nav-link" href="docs/html/napkin.html">
+				<a class="nav-link" id="motive-button" onClick="splashFadeIn(3); toggleMotiveVis(0)" style="cursor: pointer; opacity: 1.0;">
 				[ motive ]
 				</a>
 			</span>

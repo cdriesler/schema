@@ -2,6 +2,15 @@
 	overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
+}
+
 .body {
 	margin: 0;
 	padding: 0;
@@ -112,7 +121,7 @@ splash {
 	margin: 0;
 	padding: 0;
 	
-	width: 200vw;
+	width: 75vw;
 
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
@@ -133,15 +142,38 @@ splash {
 	margin: 0;
 	padding: 0;
 	padding-bottom: 20px;
-	padding-right: 100vw;
+	padding-right: 50vw;
 	
-	width: 200vw;
+	width: 75vw;
 	
 	font-family: 'Inconsolata', monospace;
 	
 	border-bottom: solid black 4px;
 	
 	-webkit-text-stroke-width: 0px;
+	-webkit-text-stroke-color: black;
+	font-size: 1.5vw;
+	color: black;
+	-webkit-text-fill-color: black;
+	font-weight: normal;
+}
+
+.body-text {
+	position: absolute;
+	top: 29vh;	
+	left: 26%;
+	right: -20vw;
+	margin: 0;
+	margin-right: 20vw;
+	padding-right: 20vw;
+	padding: 0;
+	
+	height: 60vh;
+	
+	overflow-y: hidden;
+	
+	font-family: 'Inconsolata', monospace;
+	
 	-webkit-text-stroke-color: black;
 	font-size: 1.5vw;
 	color: black;
@@ -168,9 +200,10 @@ splash {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	padding-top: 5px;
+	padding-top: .75vw;
+	padding-bottom: .75vw;
 	padding-left: 0.5%;
-	bottom: 10px;
+	bottom: 1px;
 	
 	width: 20%;
 	text-align: center;
@@ -179,7 +212,7 @@ splash {
 	
 	font-family: 'Inconsolata', monospace;
 	font-weight: normal;
-	font-size: 2vw;
+	font-size: 1.5vw;
 	color: grey;
 }
 
@@ -187,14 +220,17 @@ splash {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	bottom: 10px;
+	padding-top: .75vw;
+	padding-bottom: .75vw;
+	padding-left: 0.5%;
+	bottom: 1px;
 	
 	width: 20%;
 	text-align: center;
 	
 	font-family: 'Inconsolata', monospace;
 	font-weight: normal;
-	font-size: 2vw;
+	font-size: 1.5vw;
 	color: grey;
 }
 
@@ -218,7 +254,7 @@ splash {
 	margin: 5px;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	margin-left: 10.5%;
+	margin-left: 9.25%;
 	color: white;
 	text-align: center;
 	vertical-align: top;
@@ -275,7 +311,7 @@ splash {
 	
 	width: 2.5vw;
 	height: 2.1vw;
-	background-color: white;
+	background-color: transparent;
 	
 	outline-style: solid;
 	outline-color: black;
