@@ -7,6 +7,22 @@
 		<link rel="stylesheet" href="docs/css/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
 		
+		
+		<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  // Yes, I know it's stupid to expose this information like this. Using the free tier, wish me luck.
+		  var config = {
+			apiKey: "AIzaSyD9dD5khm5O9gKNcI_Vaj1AcJ_LJFRyOWg",
+			authDomain: "schema-dispatch.firebaseapp.com",
+			databaseURL: "https://schema-dispatch.firebaseio.com",
+			projectId: "schema-dispatch",
+			storageBucket: "",
+			messagingSenderId: "486382354587"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		
 		<script src="docs/js/main.js"></script>
 		<script src="docs/js/splash.js"></script>
 		<script src="docs/js/debug.js"></script>
@@ -15,7 +31,7 @@
     <body>
 		<div class="column left">
 			<span class="nav-action-left">
-				<a class="nav-link" href="docs/html/resume.html">
+				<a class="nav-link" href="docs/html/formtest.html">
 				[ author ]
 				</a>
 			</span>
