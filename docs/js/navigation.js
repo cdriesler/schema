@@ -40,12 +40,8 @@ function showDetailContent(index) {
 	var oldTitle = existingText;
 	var newTitle = creditsInfo[index];
 	
-	if (blocker_2 === 1) {
-		setTimeout(showDetailContent(index), 400);
-	}
-	else {
-		updateDetailContent(0, newTitle, oldTitle, 1);	
-	}
+
+	updateDetailContent(0, newTitle, oldTitle, 1);	
 	
 }
 
