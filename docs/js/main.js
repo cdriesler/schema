@@ -64,7 +64,7 @@ function showAuthorSub(index) {
 	
 	var subtitles = [
 		"home & campground : retrofit living + landscape generator",
-		"double-monument : homage to assorted character conflict",
+		"double-monument : homage to assorted character conflicts",
 		"synchronzed workflow between rhino and illustrator"
 	];
 	
@@ -114,7 +114,7 @@ function updateSubTitle(index, newTitle, oldTitle, state) {
 		blocker_2 = 0;
 		//alert(state);
 		if (state === 0) {
-			document.getElementById("feature-subtitle").innerHTML = '<a class="bracket-link" href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html#content" target="_blank">[ free software ]</a> experiments re : automation and architecture';
+			document.getElementById("feature-subtitle").innerHTML = '<a class="nav-link" href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html#content" target="_blank" style="color:grey">[ free software ]</a> experiments re : automation and architecture';
 		}
 		else {
 			document.getElementById("feature-subtitle").textContent = newTitle;

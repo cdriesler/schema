@@ -32,7 +32,7 @@ function showDetailContent(index) {
 	
 	var creditsInfo = [
 		"R007 : pratt institute / dragana zoric, critic",
-		"R003 : school for poetic computation, 2017 summer session",
+		"R003 : school for poetic computation, code narratives summer session",
 		"R008 : independent, w / adaptations on Doodlebug, by andrew heumann",
 		"R003 : napkin manifesto / last updated 2018-12-17"
 	];
