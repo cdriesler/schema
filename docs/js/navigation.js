@@ -88,7 +88,7 @@ function updateActions(index) {
 		document.getElementById("left-action").innerHTML = "<a class='nav-link' onClick='resetNavActions();' style='cursor: pointer;'>< cancel</a>";	
 		document.getElementById("left-action").setAttribute("data-activeProj", index);	
 		
-		document.getElementById("right-action").innerHTML = "<a class='nav-link' href='docs/html/" + projPages[index] + ".html style='cursor: pointer;'>create ></a>";	
+		document.getElementById("right-action").innerHTML = "<a class='nav-link' href='docs/html/" + projPages[index] + ".html' style='cursor: pointer;'>create ></a>";	
 	}
 }
 

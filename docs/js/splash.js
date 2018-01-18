@@ -7,7 +7,7 @@
 // 05 - napkin_manifesto
 // 06 - detail-bar
 
-var splash_ids = ["maison_splash", "eponym_splash", "natalus_splash", "motive_text", "motive_text", "napkin_manifesto", "detail-bar"];
+var splash_ids = ["maison_splash", "eponym_splash", "natalus_splash", "motive_text", "motive_text", "napkin_manifesto", "detail-bar", "author_text"];
 
 var C  = 0; //opacity increase continuation token
 var C2 = 0; //opacity increase running token
