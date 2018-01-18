@@ -33,7 +33,8 @@ function showDetailContent(index) {
 	var creditsInfo = [
 		"R007 : pratt institute / dragana zoric, critic",
 		"R003 : school for poetic computation, 2017 summer session",
-		"R008 : independent, w / adaptations on Doodlebug, by andrew heumann"
+		"R008 : independent, w / adaptations on Doodlebug, by andrew heumann",
+		"R003 : napkin manifesto / last updated 2018-12-17"
 	];
 	
 	var existingText = document.getElementById("detail-bar").textContent;
@@ -73,10 +74,14 @@ function setCharAt(currentTitle,index,chr) {
 
 function updateActions(index) {
 	"use strict";
-
-	//alert("updating nav");
 	
-	document.getElementById("left-action").innerHTML = "<a class='nav-link' onClick='resetNavActions();' style='cursor: pointer;' data-activeProj='" + index.toString() + "'>< cancel</a>";	
+	if (index === 3) {
+		//do nothing, napkin manifesto is open.
+	}
+	else {
+		document.getElementById("left-action").innerHTML = "<a class='nav-link' onClick='resetNavActions();' style='cursor: pointer;'>< cancel</a>";	
+		document.getElementById("left-action").setAttribute("data-activeProj", index);	
+	}
 }
 
 function resetNavActions() {
@@ -86,8 +91,11 @@ function resetNavActions() {
 	
 	document.getElementById("left-action").innerHTML = '<a class="nav-link" style="cursor: pointer;">[ author ]</a>';
 	
-	alert(document.getElementById("left-action").activeProj);
+	var activeProj = parseInt(document.getElementById("left-action").getAttribute("data-activeProj"));
 	
+	document.getElementById("detail-bar").textContent = "";
+	
+	splashFadeOut(activeProj);
 	splashFadeOut(6);
 	hideAuthorOverlay();
 }

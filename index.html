@@ -40,7 +40,7 @@
     </head>
     <body onLoad="loadDelay();">
 		<div class="column left">
-			<span class="nav-action" id="left-action">
+			<span class="nav-action" id="left-action" data-activeProj="x">
 				<a class="nav-link" style="cursor: pointer;">
 					[ author ]
 				</a>
@@ -98,7 +98,7 @@
 					close >
 				</span>
 				<br><br>
-				<span class="nav-link" onClick="splashFadeIn(5, 0);" style="cursor: pointer; color: grey;">
+				<span class="nav-link" onClick="splashFadeIn(5, 0); splashFadeIn(6, 3);" style="cursor: pointer; color: grey;">
 					verbose >
 				</span>
 			</div>
@@ -124,7 +124,7 @@
 				so why limit creation to the architect? <br>
 				we can be diplomats instead of dictators!
 				<br><br><br>
-				<a class="nav-link" onClick="splashFadeOut(5); toggleMotiveVis(1);" style="cursor: pointer; color: grey;">
+				<a class="nav-link" onClick="splashFadeOut(5); splashFadeOut(6);" style="cursor: pointer; color: grey;">
 					ok, chuck >
 				</a>
 			</div>
