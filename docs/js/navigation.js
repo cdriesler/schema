@@ -85,10 +85,10 @@ function updateActions(index) {
 		//do nothing, napkin manifesto is open.
 	}
 	else {
-		document.getElementById("left-action").innerHTML = "<a class='nav-link' onClick='resetNavActions();' style='cursor: pointer;'>< cancel</a>";	
-		document.getElementById("left-action").setAttribute("data-activeProj", index);	
+		document.getElementById("left-action").innerHTML = "<a class='nav-link' onClick='resetNavActions();' style='cursor: pointer; color: black;'>< cancel</a>";	
+		document.getElementById("left-action").setAttribute("data-activeProj", index);
 		
-		document.getElementById("right-action").innerHTML = "<a class='nav-link' href='docs/html/" + projPages[index] + ".html' style='cursor: pointer;'>create ></a>";	
+		document.getElementById("right-action").innerHTML = "<a class='nav-link' href='docs/html/" + projPages[index] + ".html' style='cursor: pointer; color: black;'>create ></a>";	
 	}
 }
 
@@ -97,7 +97,9 @@ function resetNavActions() {
 
 	//alert("updating nav");
 	
-	document.getElementById("left-action").innerHTML = '<a class="nav-link" style="cursor: pointer;">[ author ]</a>';
+	document.getElementById("left-action").innerHTML = '<a class="nav-link" style="cursor: pointer;" onClick="splashFadeIn(7, 0);">[ author ]</a>';
+	
+	document.getElementById("right-action").innerHTML = '<a class="nav-link" style="cursor: pointer;" onClick="splashFadeIn(3, 0);">[ motive ]</a>';
 	
 	var activeProj = parseInt(document.getElementById("left-action").getAttribute("data-activeProj"));
 	
