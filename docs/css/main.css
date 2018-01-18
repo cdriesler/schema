@@ -406,7 +406,7 @@ splash {
 	display: inline-block;
 	align-content: center;
 	vertical-align: middle;
-	object-fit: cover;
+	object-fit: contain;
 	
 	bottom: 18vh;
 	margin: 0;
