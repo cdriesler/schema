@@ -403,12 +403,16 @@ splash {
 }
 
 .splash-video {
+	position: absolute;
 	display: inline-block;
 	align-content: center;
 	vertical-align: middle;
 	object-fit: contain;
 	
-	bottom: 18vh;
+	width: 50%;
+	height: 95vh;
+	
+	left:26%;
 	margin: 0;
 	padding: 0;
 	

@@ -32,8 +32,8 @@ function showDetailContent(index) {
 	
 	var creditsInfo = [
 		"R007 : pratt institute / dragana zoric, critic",
-		"R003 : school for poetic computation, code narratives summer session",
-		"R008 : independent, w / adaptations on Doodlebug, by andrew heumann",
+		"R004 : school for poetic computation, code narratives summer session",
+		"R008 : inspired by + adaptations on andrew heumann's plugin doodlebug",
 		"R003 : napkin manifesto / last updated 2018-12-17"
 	];
 	
@@ -75,12 +75,20 @@ function setCharAt(currentTitle,index,chr) {
 function updateActions(index) {
 	"use strict";
 	
+	var projPages = [
+		"maison",
+		"eponym",
+		"natalus"		
+	];
+	
 	if (index === 3) {
 		//do nothing, napkin manifesto is open.
 	}
 	else {
 		document.getElementById("left-action").innerHTML = "<a class='nav-link' onClick='resetNavActions();' style='cursor: pointer;'>< cancel</a>";	
 		document.getElementById("left-action").setAttribute("data-activeProj", index);	
+		
+		document.getElementById("right-action").innerHTML = "<a class='nav-link' href='docs/html/" + projPages[index] + ".html style='cursor: pointer;'>create ></a>";	
 	}
 }
 

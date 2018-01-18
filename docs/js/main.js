@@ -22,13 +22,7 @@ function showAuthor(newTitle) {
 	
 	var oldTitle = document.getElementById("feature-title").textContent.substr(0, 11);
 	
-	if (blocker_1 === 1) {
-		setTimeout(showAuthor, 400);
-	}
-	else {
-		updateTitle(0, newTitle, oldTitle);	
-	}
-	
+	updateTitle(0, newTitle, oldTitle);		
 }
 
 function hideAuthor() {
