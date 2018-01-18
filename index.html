@@ -26,20 +26,28 @@
 		<script src="docs/js/main.js"></script>
 		<script src="docs/js/splash.js"></script>
 		<script src="docs/js/debug.js"></script>
+		<script>
+			function loadDelay() {
+				"use strict";
+				
+				alert("loaded!")
+				setTimeout(hideAuthorOverlay, 5000);
+			}
+		</script>
 		<title></title>
     </head>
-    <body>
+    <body onLoad="loadDelay();">
 		<div class="column left">
-			<span class="nav-action-left">
-				<a class="nav-link" href="docs/html/resume.html">
-				[ author ]
+			<span class="nav-action">
+				<a class="nav-link" style="cursor: pointer;">
+					[ author ]
 				</a>
 			</span>
 		</div>
 		
 		<div class="column middle">
 			<center>
-				<span class="splash-video">
+				<div class="splash-video">
 					
 					<video id="maison_splash" autoplay="autoplay" loop="Loop" style="opacity:0; display:none;">
 						<source src="docs/img/splash images/maison_splash.mp4" type="video/mp4">
@@ -57,38 +65,40 @@
 					<img id="eponym_splash" src="docs/img/splash images/eponym_splash.png" alt="eponym" style="opacity:0; display:none;">
 					-->
 					
-				</span>
+				</div>
 			</center>
 			
 			<div class="main-title" id="feature-title" >
-			S Y S T E M
+			S C H E M A
 			</div>
 			
 			<div class="main-subtitle" id="feature-subtitle">
+				computational design frameworks by chuck driesler
+				<!--
 				<a class="bracket-link" href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html#content" target="_blank" style="color:grey">[ free software ]</a> experiments re : automation and architecture
+				-->
 			</div>
 			
 			<div class="body-text" id="motive_text" style="opacity:0; display:none;">
-				this is where I publish my experiments and systems for automated design.
+				this is where I publish my experiments with automated design, click a box below!
 				<br><br>
-				each one should allow you to create something through participation and deliver a basic set of documentation + animations for your result.
+				each system asks you to create something through a few specific inputs, and then it e-mails you the results. (after a bit of work) it will also attach any relevant scripts/files if you want to tinker on your own.
 				<br><br>
-				the computers will figure out architecture some day.
+				very much a proof-of-concept right now, but the smart computers will figure out architecture some day.
 				<br><br>
 				if they can already do [ this ], why not space? <br>
 				maybe you believe what they simulate isn’t real. <br>
 				but [ if you can’t tell the difference, does it matter? ]
 				<br><br>
-				until then, I’m an architecture student attempting to automate myself out of a future in architecture.
-				<br><br>
 				all projects are free software and shared on my [ github ]
 				<br><br><br>
-				<a class="nav-link" onClick="splashFadeOut(3); toggleMotiveVis(1);" style="cursor: pointer; color: grey;">
-					[ close ]
-				</a>
-				<a class="nav-link" onClick="splashFadeOut(4);" style="cursor: pointer; color: grey;">
-					[ verbose ]
-				</a>
+				<span class="nav-link" onClick="splashFadeOut(3); toggleMotiveVis(1);" style="cursor: pointer; color: grey;">
+					close >
+				</span>
+				<br><br>
+				<span class="nav-link" onClick="splashFadeIn(5);" style="cursor: pointer; color: grey;">
+					verbose >
+				</span>
 			</div>
 			
 			<div class="body-text" id="napkin_manifesto" style="opacity:0; display:none;">
@@ -96,32 +106,31 @@
 				instead of static objects, <br>
 				undermines the authority of the architect in architecture. 
 				<br><br>
-				the last word on [ design ] <br>
-				no longer belongs to [ the designer ]
+				the last word on (design)<br>
+				no longer belongs to (the designer)
 				<br><br>
 				if we design patterns and parameters for space, <br>
+				and if we let users fill in the blanks, <br>
 				the designed product is a debate, not an imposition. <br>
 				so language becomes critical:
 				<br><br>
-				“I” can’t articulate my concept of [ domestic mutations ] <br>
-				but “I” can still make a [ home ]
+				do I need to articulate my concept for <span title="Blough I love your studio, just stealing the language.">"domestic mutation"</span><br>
+				to know what I need in my home?
 				<br><br>
 				automation is the tool for persistent translation. <br>
-				participation, subversive or passive, shapes environment, <br>
+				participation, "subversive" or "passive," shapes environment, <br>
 				so why limit creation to the architect? <br>
-				we can be diplomats instead of dictators! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				we can be diplomats instead of dictators!
+				<br><br><br>
 				<a class="nav-link" onClick="splashFadeOut(5); toggleMotiveVis(1);" style="cursor: pointer; color: grey;">
-					[ ok, chuck ]
+					ok, chuck >
 				</a>
 			</div>
 			
-			<div class="nav">
-				<span class="nav-author" onMouseOver="makeAuthorOverlay('S C H E M A');" onMouseLeave="hideAuthorOverlay();">
-				//
-				</span>
+			<div class="nav">				
 				<span class="nav-divider"></span>
-				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('M A I S O N');splashFadeIn(0);" onMouseLeave="hideAuthorOverlay();splashFadeOut(0);">
-					<a class="nav-link" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='grey'" onClick="debugAlert('system not yet implemented!'); toggleDetailBar(0, 0);" style="cursor: pointer; color: grey;">
+				<span class="nav-project-schema" onMouseOver="">
+					<a class="nav-link" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='grey'" onClick="splashFadeIn(0); makeAuthorOverlay('M A I S O N', 0); splashFadeIn(6);" style="cursor: pointer; color: grey;">
 					00
 					</a>
 				</span>
@@ -136,9 +145,24 @@
 					N
 					</a>
 				</span>
+				
+				<span class="nav-divider" style="position:absolute; right: 0%;"></span>
 			</div>
+			
+			<span class="detail-bar" id="detail-bar" style="opacity:0; display:none;">
+				2017 / pratt institute / critic: dragana zoric 
+			</span>			
 		</div>
 		
+		<div class="column right">
+			<span class="nav-action">
+				<a class="nav-link" style="cursor: pointer;" onClick="splashFadeIn(3);">
+					[ motive ]
+				</a>
+			</span>
+		</div>
+		
+		<!--
 		<div class="column right">
 			<span class="nav-action-right">
 				<a class="nav-link" id="motive-button" onClick="splashFadeIn(3); toggleMotiveVis(0)" style="cursor: pointer; opacity: 1.0;">
@@ -146,5 +170,6 @@
 				</a>
 			</span>
 		</div>
+		-->
     </body>
 </html>

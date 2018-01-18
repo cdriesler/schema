@@ -3,11 +3,11 @@
 var blocker_1 = 0; //title blocker
 var blocker_2 = 0; //subtitle blocker
 
-function makeAuthorOverlay(newTitle) {
+function makeAuthorOverlay(newTitle, index) {
 	"use strict";
 	
 	showAuthor(newTitle);
-	showAuthorSub();
+	showAuthorSub(index);
 }
 
 function hideAuthorOverlay() {
@@ -63,12 +63,17 @@ function updateTitle(index, newTitle, oldTitle) {
 	}
 }
 
-function showAuthorSub() {
+function showAuthorSub(index) {
 	"use strict";
+	
+	var subtitles = [
+		"projects by chuck driesler published under the [ GNU GPL ]",
+		"testing a second subtitle"	
+	];
 	
 	var existingText = document.getElementById("feature-subtitle").textContent;
 	var oldTitle = existingText;
-	var newTitle = "projects by chuck driesler published under the [ GNU GPL ]";
+	var newTitle = subtitles[index];
 	
 	if (blocker_2 === 1) {
 		setTimeout(showAuthorSub, 400);

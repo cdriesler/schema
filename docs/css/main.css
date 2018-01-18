@@ -1,4 +1,7 @@
 .html {
+	margin: 0;
+	padding: 0;
+	
 	overflow-x: hidden;
 }
 
@@ -19,24 +22,30 @@
 
 .column {
 	float: left;
-	height: 100vh;
+	height: 95vh;
 	
 	margin: 0;
 	padding: 0;
 }
 
-.left, .right {
-	width: 20%;
+.left {
+	width: 24%;
 	
 	margin: 0;
 	padding: 0;
+}
+
+.right {
+	width: 24%;
 	
-	outline: solid black 4px;
-	outline-offset: 8px;
+	margin: 0;
+	padding: 0;	
 }
 
 .middle {
-	width: 60%;
+	width: 52%;
+	
+	overflow: hidden;
 	
 	margin: 0;
 	padding: 0;
@@ -74,6 +83,10 @@ a.bracket-link:hover {
 	font-weight: normal;
 }
 
+.nav-link {
+	color: grey;
+}
+
 a.nav-link:link {
 	color: grey;
 	text-decoration : none;
@@ -107,7 +120,7 @@ body {
 
 splash {
 	position: absolute;
-	width: 60%;
+	width: 52%;
 
 	vertical-align: middle;
 	opacity: 100;
@@ -116,12 +129,12 @@ splash {
 
 .main-title {
     position: absolute;
-    top: 2vh;
-	left: 26%;
+    top: 32vh;
 	margin: 0;
 	padding: 0;
 	
-	width: 75vw;
+	width: 52%;
+	text-align: center;
 
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
@@ -131,24 +144,20 @@ splash {
 	-webkit-text-fill-color: transparent;
 	color: transparent;
 	
-	-webkit-text-stroke-width: 4px;
+	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: black;
 }
 
 .main-subtitle {
     position: absolute;
-    top: 20vh;	
-	left: 26%;
+    top: 50vh;
 	margin: 0;
 	padding: 0;
-	padding-bottom: 20px;
-	padding-right: 50vw;
 	
-	width: 75vw;
+	width: 52%;
+	text-align: center;
 	
 	font-family: 'Inconsolata', monospace;
-	
-	border-bottom: solid black 4px;
 	
 	-webkit-text-stroke-width: 0px;
 	-webkit-text-stroke-color: black;
@@ -160,15 +169,14 @@ splash {
 
 .body-text {
 	position: absolute;
-	top: 29vh;	
-	left: 26%;
-	right: -20vw;
+	top: 3vh;	
+	left: 25.5%;
 	margin: 0;
-	margin-right: 20vw;
-	padding-right: 20vw;
 	padding: 0;
+	margin-top: 15vh;
 	
-	height: 60vh;
+	height: 80vh;
+	width: 50%;
 	
 	overflow-y: hidden;
 	
@@ -177,72 +185,122 @@ splash {
 	-webkit-text-stroke-color: black;
 	font-size: 1.5vw;
 	color: black;
+	background-color: white;
 	-webkit-text-fill-color: black;
 	font-weight: normal;
 }
 
 .nav-action {	
 	position: absolute;
-	margin: 0;
-	padding: 0;
-	bottom: 15px;
-	
-	width: 20%;
-	text-align: center;
-	
-	font-family: 'Inconsolata', monospace;
-	font-weight: normal;
-	font-size: 2vw;
-	color: grey;
-}
 
-.nav-action-left {
-	position: absolute;
-	margin: 0;
-	padding: 0;
-	padding-top: .75vw;
-	padding-bottom: .75vw;
-	padding-left: 0.5%;
-	bottom: 1px;
-	
-	width: 20%;
-	text-align: center;
-	
-	border-top: solid black 4px;
-	
 	font-family: 'Inconsolata', monospace;
 	font-weight: normal;
 	font-size: 1.5vw;
+		
+	bottom: 15px;
+		
+	margin:0;
+	padding:0;
+	padding-top: .4vw;
 	color: grey;
+	text-align: center;
+	vertical-align: top;
+	
+	width: 24%;
+	height: 2.1vw;
+}
+
+.nav-projects {	
+	position: absolute;
+
+	font-family: 'Inconsolata', monospace;
+	font-weight: normal;
+	font-size: 1.5vw;
+		
+	bottom: 15px;
+		
+	margin:0;
+	padding-top: .4vw;
+	color: grey;
+	text-align: center;
+	vertical-align: top;
+	
+	width: 24%;
+	height: 2.1vw;
+}
+
+/*
+.nav-action:hover {
+	color: black;
+	
+	-o-transition:color .5s;
+  	-ms-transition:color .5s;
+  	-moz-transition:color .5s;
+  	-webkit-transition:color .5s;
+  	transition:color .5s;
+}
+*/
+
+.nav-action-left {
+	position: absolute;
+
+	font-family: 'Inconsolata', monospace;
+	font-weight: normal;
+	font-size: 1.5vw;
+		
+	bottom: 15px;
+	left: 0%;
+		
+	margin:0;
+	padding-top: .4vw;
+	color: white;
+	text-align: center;
+	vertical-align: top;
+	
+	width: 24%;
+	height: 2.1vw;
+	background-color: black;
+	
+	outline-style: solid;
+	outline-color: black;
+	outline-width: 2px;
+	outline-offset: -2px;
 }
 
 .nav-action-right {
 	position: absolute;
-	margin: 0;
-	padding: 0;
-	padding-top: .75vw;
-	padding-bottom: .75vw;
-	padding-left: 0.5%;
-	bottom: 1px;
-	
-	width: 20%;
-	text-align: center;
-	
+
 	font-family: 'Inconsolata', monospace;
 	font-weight: normal;
 	font-size: 1.5vw;
-	color: grey;
+		
+	bottom: 15px;
+	right: 0%;
+		
+	margin:0;
+	padding-top: .4vw;
+	color: white;
+	text-align: center;
+	vertical-align: top;
+	
+	width: 24%;
+	height: 2.1vw;
+	background-color: black;
+	
+	outline-style: solid;
+	outline-color: black;
+	outline-width: 2px;
+	outline-offset: -2px;
 }
 
 .nav {
 	position:absolute;
-	width: 60%;
+	width: 52%;
     bottom: 15px;
 
 	font-family: 'Inconsolata', monospace;
 	font-weight: bold;
 	font-size: 1.5vw;
-	text-align:left;
 }
 
 .nav-author {
@@ -275,7 +333,7 @@ splash {
 		
 	margin-left: 2px;
 	margin-right: 2px;
-	width: .25vw;
+	width: 2px;
 	height: 2.5vw;
 	
 	background-color: black;
@@ -286,11 +344,12 @@ splash {
     display: inline-block;
 	vertical-align: middle;
 	
-	margin-left: 31.5vw;
+	padding:0;
+	margin-left: 0;
 	margin-right: 0px;
 	padding-top: .4vw;
 	padding-right: 0;
-	width: .25vw;
+	width: 2px;
 	height: 2.1vw;
 	
 	background-color: black;
@@ -315,8 +374,8 @@ splash {
 	
 	outline-style: solid;
 	outline-color: black;
-	outline-width: 4px;
-	outline-offset: -4px;
+	outline-width: 2px;
+	outline-offset: -2px;
 
 }
 
@@ -327,7 +386,7 @@ splash {
 	font-weight: normal;
 	margin: 0px;
 	padding-top: .4vw;
-	color: black;
+	color: transparent;
 	text-align: center;
 	vertical-align: middle;
 	
@@ -345,17 +404,38 @@ splash {
 
 .splash-video {
 	display: inline-block;
+	align-content: center;
 	vertical-align: middle;
 	object-fit: cover;
 	
+	bottom: 10vh;
 	margin: 0;
 	padding: 0;
 	
-	min-height: 100%;
-	
 	overflow: hidden;
+}
+
+.detail-bar {
+	position: absolute;
+
+	font-family: 'Inconsolata', monospace;
+	font-weight: normal;
+	font-size: 1vw;
+		
+	bottom: 15px;
+	left: 24.25%;
+		
+	margin-top: 1vw;
+	padding-top: .4vw;
+	color: white;
+	text-align: center;
+	vertical-align: bottom;
 	
-	transform: translateY(-4vh);
+	line-height: 1.5vw;
+	
+	width: 51.75%;
+	height: 2.1vw;
+	background-color: black;
 }
 
 /*

@@ -1,0 +1,3 @@
+function showDetailBar () {
+	"use strict";
+}
