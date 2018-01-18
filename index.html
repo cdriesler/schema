@@ -25,20 +25,22 @@
 		
 		<script src="docs/js/main.js"></script>
 		<script src="docs/js/splash.js"></script>
+		<script src="docs/js/navigation.js"></script>
 		<script src="docs/js/debug.js"></script>
+		
 		<script>
 			function loadDelay() {
 				"use strict";
 				
-				alert("loaded!")
-				setTimeout(hideAuthorOverlay, 5000);
+				setTimeout(hideAuthorOverlay, 3000);
 			}
 		</script>
+		
 		<title></title>
     </head>
     <body onLoad="loadDelay();">
 		<div class="column left">
-			<span class="nav-action">
+			<span class="nav-action" id="left-action">
 				<a class="nav-link" style="cursor: pointer;">
 					[ author ]
 				</a>
@@ -73,7 +75,7 @@
 			</div>
 			
 			<div class="main-subtitle" id="feature-subtitle">
-				computational design frameworks by chuck driesler
+				automated design and/or computation frameworks by chuck driesler
 				<!--
 				<a class="bracket-link" href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html#content" target="_blank" style="color:grey">[ free software ]</a> experiments re : automation and architecture
 				-->
@@ -84,7 +86,7 @@
 				<br><br>
 				each system asks you to create something through a few specific inputs, and then it e-mails you the results. (after a bit of work) it will also attach any relevant scripts/files if you want to tinker on your own.
 				<br><br>
-				very much a proof-of-concept right now, but the smart computers will figure out architecture some day.
+				very much a proof-of-concept right now, but the smarter computers will figure out architecture some day.
 				<br><br>
 				if they can already do [ this ], why not space? <br>
 				maybe you believe what they simulate isn’t real. <br>
@@ -96,7 +98,7 @@
 					close >
 				</span>
 				<br><br>
-				<span class="nav-link" onClick="splashFadeIn(5);" style="cursor: pointer; color: grey;">
+				<span class="nav-link" onClick="splashFadeIn(5, 0);" style="cursor: pointer; color: grey;">
 					verbose >
 				</span>
 			</div>
@@ -114,7 +116,7 @@
 				the designed product is a debate, not an imposition. <br>
 				so language becomes critical:
 				<br><br>
-				do I need to articulate my concept for <span title="Blough I love your studio, just stealing the language.">"domestic mutation"</span><br>
+				do I need to articulate my concept for a <span title="Blough I love your studio, just stealing the language.">"domestic mutation"</span><br>
 				to know what I need in my home?
 				<br><br>
 				automation is the tool for persistent translation. <br>
@@ -129,19 +131,22 @@
 			
 			<div class="nav">				
 				<span class="nav-divider"></span>
-				<span class="nav-project-schema" onMouseOver="">
-					<a class="nav-link" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='grey'" onClick="splashFadeIn(0); makeAuthorOverlay('M A I S O N', 0); splashFadeIn(6);" style="cursor: pointer; color: grey;">
+				
+				<span class="nav-project-schema">
+					<a class="nav-link" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='grey'" onClick="splashFadeIn(0, 0); makeAuthorOverlay('M A I S O N', 0); splashFadeIn(6, 0);" style="cursor: pointer; color: grey;">
 					00
 					</a>
 				</span>
-				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('E P O N Y M');splashFadeIn(1);" onMouseLeave="hideAuthorOverlay();splashFadeOut(1);">
-					<a class="nav-link" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='grey'" href="docs/html/formtest.html" style="cursor: pointer; color: grey;">
+				<span class="nav-project-schema">
+					<a class="nav-link" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='grey'" onClick="splashFadeIn(1, 0); makeAuthorOverlay('E P O N Y M', 1); splashFadeIn(6, 1);" style="cursor: pointer; color: grey;">
 					01
 					</a>
 				</span>
+				
 				<span class="nav-divider"></span>
-				<span class="nav-project-schema" onMouseOver="makeAuthorOverlay('N A T A L U S');splashFadeIn(2);" onMouseLeave="hideAuthorOverlay();splashFadeOut(2);">
-					<a class="nav-link" href="http://www.grasshopper3d.com/group/natalus" target="_blank">
+				
+				<span class="nav-project-schema">
+					<a class="nav-link" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='grey'" onClick="splashFadeIn(2, 0); makeAuthorOverlay('g h.N A T A', 2); splashFadeIn(6, 2);" style="cursor: pointer; color: grey;">
 					N
 					</a>
 				</span>
@@ -150,13 +155,13 @@
 			</div>
 			
 			<span class="detail-bar" id="detail-bar" style="opacity:0; display:none;">
-				2017 / pratt institute / critic: dragana zoric 
+				 
 			</span>			
 		</div>
 		
 		<div class="column right">
-			<span class="nav-action">
-				<a class="nav-link" style="cursor: pointer;" onClick="splashFadeIn(3);">
+			<span class="nav-action" id="right-action">
+				<a class="nav-link" style="cursor: pointer;" onClick="splashFadeIn(3, 0);">
 					[ motive ]
 				</a>
 			</span>

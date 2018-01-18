@@ -12,7 +12,7 @@ var splash_ids = ["maison_splash", "eponym_splash", "natalus_splash", "motive_te
 var C  = 0; //opacity increase continuation token
 var C2 = 0; //opacity increase running token
 
-function splashFadeIn(index) {
+function splashFadeIn(index, navIndex) {
 	"use strict";
 	
 	var vid = document.getElementById(splash_ids[parseInt(index)]);
@@ -24,19 +24,24 @@ function splashFadeIn(index) {
 		opacity = 0;
 	}
 	
+	var tickrate = 100;
+	
 	//alert(opacity);
 	
 	if (opacity < 1 && C < 1) {
 		C2 = 1;
 		opacity = parseFloat(opacity) + parseFloat(0.05);
 		//alert("increasing opacity... | " + opacity);
-		setTimeout(function(){splashFadeIn(index);},100);
+		setTimeout(function(){splashFadeIn(index, navIndex);},tickrate);
 	}
 	else if (opacity >= 1) {
 		C2 = 0;
 		
 		if (index === 5) {
 			splashFadeOut(4);
+		}
+		else if (index === 6) {
+			updateNav(navIndex);
 		}
 	}
 	else if (C === 1 && C2 === 1) {
@@ -46,7 +51,7 @@ function splashFadeIn(index) {
 	}
 	else if (C === 1 && C2 === 0) {
 		C = 0;
-		setTimeout(function(){splashFadeIn(index);},5);
+		setTimeout(function(){splashFadeIn(index, navIndex);},5);
 	}
 	
 	vid.style.opacity = opacity;

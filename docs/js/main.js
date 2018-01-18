@@ -37,12 +37,8 @@ function hideAuthor() {
 	var oldTitle = document.getElementById("feature-title").textContent.substr(0, 11);
 	var newTitle = "S Y S T E M";
 	
-	if (blocker_1 === 1) {
-		setTimeout(hideAuthor, 400);
-	}
-	else {
-		updateTitle(0, newTitle, oldTitle);	
-	}	
+	updateTitle(0, newTitle, oldTitle);	
+	
 }
 
 function updateTitle(index, newTitle, oldTitle) {
@@ -67,8 +63,9 @@ function showAuthorSub(index) {
 	"use strict";
 	
 	var subtitles = [
-		"projects by chuck driesler published under the [ GNU GPL ]",
-		"testing a second subtitle"	
+		"home & campground : retrofit living + landscape generator",
+		"double-monument : homage to assorted character conflict",
+		"synchronzed workflow between rhino and illustrator"
 	];
 	
 	var existingText = document.getElementById("feature-subtitle").textContent;
@@ -76,7 +73,7 @@ function showAuthorSub(index) {
 	var newTitle = subtitles[index];
 	
 	if (blocker_2 === 1) {
-		setTimeout(showAuthorSub, 400);
+		setTimeout(function(){ showAuthorSub(index); }, 400);
 	}
 	else {
 		updateSubTitle(0, newTitle, oldTitle, 1);	
@@ -116,11 +113,11 @@ function updateSubTitle(index, newTitle, oldTitle, state) {
 	else {
 		blocker_2 = 0;
 		//alert(state);
-		if (state === 1) {
-			document.getElementById("feature-subtitle").innerHTML = "projects by chuck driesler published under the [ GNU GPL ]";
+		if (state === 0) {
+			document.getElementById("feature-subtitle").innerHTML = '<a class="bracket-link" href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html#content" target="_blank">[ free software ]</a> experiments re : automation and architecture';
 		}
-		else if (state === 0) {
-			document.getElementById("feature-subtitle").innerHTML = '<a class="bracket-link" href="https://www.gnu.org/philosophy/open-source-misses-the-point.en.html#content" target="_blank">[ free software ]</a> experiments re: automation and architecture';
+		else {
+			document.getElementById("feature-subtitle").textContent = newTitle;
 		}
 	}
 }
