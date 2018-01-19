@@ -49,6 +49,8 @@
 	
 	margin: 0;
 	padding: 0;
+	
+	/* border: solid black 1px; */
 }
 
 a.bracket-link {
@@ -133,7 +135,7 @@ splash {
 	margin: 0;
 	padding: 0;
 	
-	width: 52%;
+	width: 51%;
 	text-align: center;
 
 	font-family: 'Inconsolata', monospace;
@@ -146,6 +148,8 @@ splash {
 	
 	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: black;
+	
+	/* border: solid black 1px; */
 }
 
 .main-subtitle {
@@ -412,7 +416,7 @@ splash {
 	width: 50%;
 	height: 95vh;
 	
-	left:26%;
+	left:24%;
 	margin: 0;
 	padding: 0;
 	
