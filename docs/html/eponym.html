@@ -5,6 +5,7 @@
 <title>Untitled Document</title>
 	
 	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/eponym.css">
 	
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 	<script>
@@ -45,10 +46,10 @@
 
 <body>
 	<div class="column left" style="padding-top: 25px; outline: solid black 2px; outline-offset: -20px;">
-		<center>content?</center>
-	</div>
-	
-	<div class="column middle" style="padding-top: 40vh;">
+		<span class="project-title">
+			<center>content?</center>
+		</span>
+		
 		<center>
 			<form name="eponym_form" onSubmit="pushEponymData()">
 				<input type="text" name="email" placeholder="delivery e-mail">
@@ -62,8 +63,10 @@
 		</center>
 	</div>
 	
-	<div class="column right" style="padding-top: 25px; outline: solid black 2px; outline-offset: -20px;">
-		<center>content!</center>	
+	<div class="project-content" style="padding-top: 40vh;">
+		<div class="adaptive-project-text" id="firstname">
+		
+		</div>
 	</div>
 
 </body>
