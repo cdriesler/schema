@@ -6,8 +6,12 @@
 // 04 - motive_text (-> napkin_manifesto)
 // 05 - napkin_manifesto
 // 06 - detail-bar
+// 07 - author_text
+// 08 - eponym_content_1 (-> eponym_content_2)
+// 09 - eponym_content_2 (-> eponym_content_3)
+// 10 - eponym_content_3 
 
-var splash_ids = ["maison_splash", "eponym_splash", "natalus_splash", "motive_text", "motive_text", "napkin_manifesto", "detail-bar", "author_text"];
+var splash_ids = ["maison_splash", "eponym_splash", "natalus_splash", "motive_text", "motive_text", "napkin_manifesto", "detail-bar", "author_text", "eponym_content_1", "eponym_content_2", "eponym_content_3",];
 
 var C  = 0; //opacity increase continuation token
 var C2 = 0; //opacity increase running token
@@ -80,6 +84,13 @@ function splashFadeOut(index) {
 	else {
 		C = 1;
 		vid.style.display = "none";
+		
+		if (index === 8) {
+			splashFadeOut(9);
+		}
+		else if (index === 9) {
+			splashFadeOut(10);
+		}
 	}
 	
 	vid.style.opacity = opacity;

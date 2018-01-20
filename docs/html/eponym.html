@@ -7,6 +7,11 @@
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/eponym.css">
 	
+	<script src="docs/js/main.js"></script>
+	<script src="docs/js/splash.js"></script>
+	<script src="docs/js/navigation.js"></script>
+	<script src="docs/js/debug.js"></script>
+	
 	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
 	<script>
 		// Initialize Firebase
@@ -53,6 +58,11 @@
 			}	
 			
 			var recipient = document.forms["confirm_form"]["email"].value;
+			
+			if (recipient == "") {
+				alert("Please provide an e-mail address to receive system output. All server logs are wiped at the end of the day.")
+			}
+			
 			var pass = confirm("EPONYM ouput files will be e-mailed to " + recipient + ".");
 			
 			if (pass === true) {
@@ -64,11 +74,16 @@
 		}
 		
 		function updateEponymContent() {
-			firstName = document.getElementById("firstname").textContent = document.forms["data_form"]["firstname"].value;
-			secondName = document.getElementById("secondname").textContent = document.forms["data_form"]["secondname"].value;
+			firstName = document.getElementById("firstname").textContent = document.forms["data_form"]["firstname"].value.replace(/\W/g, '');
+			secondName = document.getElementById("secondname").textContent = document.forms["data_form"]["secondname"].value.replace(/\W/g, '');
 			
+			//splashFadeOut(8);
 			//document.forms["data_form"]["firstname"].value = "";
 			//document.forms["data_form"]["secondname"].value = "";
+			
+			document.getElementById("eponym_content_1").style.opacity = 0;
+			document.getElementById("eponym_content_2").style.opacity = 0;
+			document.getElementById("eponym_content_3").style.opacity = 0;
 		}
 	</script>
 	
@@ -93,10 +108,10 @@
 			<hr style="height:2px; border:none; color:black; background-color:black;">
 			<br>
 			<form name="data_form" style="line-height:1vw;">
-				first name :
+				a name :
 				<input class="project-input-zone" type="text" name="firstname" placeholder="" onMouseOver="this.style.background-color='grey'">
 				<br><br>
-				second name :
+				another name :
 				<input class="project-input-zone" type="text" name="secondname" placeholder="" style="margin-bottom:0; padding-bottom: 0;" onMouseOver="this.style.background-color='grey'">
 				<br><br>
 				<input class="input-buttons" type="button" value="verify >" onClick="updateEponymContent();">
@@ -117,15 +132,27 @@
 	</div>
 	
 	<div class="project-content">
-		<div class="eponym-phrase">
+		<center>
+		<div class="eponym-phrase" style="padding-top: 25vh;">
 			<span id="firstname">
-			
+			abbott
 			</span>
 			&nbsp;+&nbsp;
 			<span id="secondname">
-			
+			costello
 			</span>
+			<br><br>
+		<span class="eponym-preview">
+			<img src="../../system/eponym/EPONYM[1]_abbott-costello.png" id="eponym_content_1" style="object-fit: scale-down;">
+		</span>
+		<span class="eponym-preview">
+			<img src="../../system/eponym/EPONYM[2]_abbott-costello.png" id="eponym_content_2" style="object-fit: scale-down;">
+		</span>
+		<span class="eponym-preview">
+			<img src="../../system/eponym/EPONYM[3]_abbott-costello.png" id="eponym_content_3" style="object-fit: scale-down;">
+		</span>
 		</div>
+		</center>
 	</div>
 
 </body>

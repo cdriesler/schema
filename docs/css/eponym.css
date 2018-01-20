@@ -55,3 +55,30 @@ input {
 	
 	cursor: pointer;
 }
+
+.eponym-phrase {
+	height: 94vh;
+	width: 75%;
+	
+	font-family: 'Inconsolata', monospace;
+	font-size: 4vw;
+	
+	vertical-align: center;
+}
+
+.eponym-preview {
+	display: inline-block;
+	text-align: center;
+	width: 15vw;
+	height: 15vw;
+	
+	outline: solid 1px black;
+	outline-offset: -2px;
+
+	object-fit: contain;
+}
+
+.eponym-preview img{
+	width: 100%;
+	object-fit: contain;
+}
