@@ -24,13 +24,13 @@
 	</script>
 
 	<script>
-		function xpushEponymData() {
+		function pushEponymData(recipient) {
 			var timestamp = new Date();
 			var submissionID = "2018_" + timestamp.toISOString().split("T")[0].split("-")[1] + timestamp.toISOString().split("T")[0].split("-")[2] + "_" + timestamp.toISOString().split("T")[1].split(".")[0].replace(":","").replace(":","");
 
-			var contact = document.forms["eponym_form"]["email"].value;
-			var firstName = document.forms["eponym_form"]["firstname"].value;
-			var secondName = document.forms["eponym_form"]["secondname"].value;
+			var contact = recipient;
+			var firstName = document.getElementById("firstname").textContent;
+			var secondName = document.getElementById("secondname").textContent;
 
 			alert("Submission ID: " + submissionID + " | " + contact.toString() + firstName.toString() + secondName.toString());
 
@@ -44,11 +44,31 @@
 	
 	<script>
 		function submitForm() {
-			var pass = confirm("Do the thing?");
+			var testData1 = document.forms["data_form"]["firstname"].value;
+			var testData2 = document.forms["data_form"]["secondname"].value;
+			
+			if (testData1 == "" || testData2 == "") {
+				alert("Please complete both inputs.");
+				return null;
+			}	
+			
+			var recipient = document.forms["confirm_form"]["email"].value;
+			var pass = confirm("EPONYM ouput files will be e-mailed to " + recipient + ".");
 			
 			if (pass === true) {
-				alert("Will do the thing.");
+				pushEponymData(recipient);
 			}
+			else {
+				//
+			}
+		}
+		
+		function updateEponymContent() {
+			firstName = document.getElementById("firstname").textContent = document.forms["data_form"]["firstname"].value;
+			secondName = document.getElementById("secondname").textContent = document.forms["data_form"]["secondname"].value;
+			
+			//document.forms["data_form"]["firstname"].value = "";
+			//document.forms["data_form"]["secondname"].value = "";
 		}
 	</script>
 	
@@ -72,14 +92,14 @@
 			adaptations on an exercise in learning natural language processing : <b>EPONYM</b> will generate a "conflict field" of letters from names
 			<hr style="height:2px; border:none; color:black; background-color:black;">
 			<br>
-			<form name="data_form" onSubmit="submitForm()" style="line-height:1vw;">
+			<form name="data_form" style="line-height:1vw;">
 				first name :
 				<input class="project-input-zone" type="text" name="firstname" placeholder="" onMouseOver="this.style.background-color='grey'">
 				<br><br>
 				second name :
 				<input class="project-input-zone" type="text" name="secondname" placeholder="" style="margin-bottom:0; padding-bottom: 0;" onMouseOver="this.style.background-color='grey'">
 				<br><br>
-				<input class="input-buttons" type="submit" value="verify >">
+				<input class="input-buttons" type="button" value="verify >" onClick="updateEponymContent();">
 			</form>
 			<br>
 			<span style="padding:0; margin: 0; font-size: .7vw; line-height: .1vw;">
@@ -87,11 +107,10 @@
 				<br>
 				changelog &gt;
 			</span>
-			<hr style="height:2px; border:none; color:black; background-color:black;">
-			<form name="confirm_form" onSubmit="submitForm()" style="position: absolute; bottom: 15px; width: 10vw;">
+			<form name="confirm_form" style="position: absolute; bottom: 15px; width: 10vw;">
 				<input title="If you would like images generated and sent to you, please input your e-mail below. All logs are wiped at the end of the day." class="project-input-zone" type="text" name="email" placeholder="name@site.com">
 				<br>
-				<input class="input-buttons" type="submit" value="submit >" onClick="submitForm();">
+				<input class="input-buttons" type="button" value="submit >" onClick="submitForm();">
 			</form>
 		</div>
 		</center>
@@ -100,11 +119,11 @@
 	<div class="project-content">
 		<div class="eponym-phrase">
 			<span id="firstname">
-			/////
+			
 			</span>
 			&nbsp;+&nbsp;
 			<span id="secondname">
-			/////
+			
 			</span>
 		</div>
 	</div>

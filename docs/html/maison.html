@@ -3,9 +3,111 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+	
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/eponym.css">
+	<link rel="stylesheet" href="../css/maison.css">
+	
+	<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+		apiKey: "AIzaSyD9dD5khm5O9gKNcI_Vaj1AcJ_LJFRyOWg",
+		authDomain: "schema-dispatch.firebaseapp.com",
+		databaseURL: "https://schema-dispatch.firebaseio.com",
+		projectId: "schema-dispatch",
+		storageBucket: "",
+		messagingSenderId: "486382354587"
+		};
+		firebase.initializeApp(config);
+
+		var database = firebase.database();
+	</script>
+
+	<script>
+		function xpushEponymData() {
+			var timestamp = new Date();
+			var submissionID = "2018_" + timestamp.toISOString().split("T")[0].split("-")[1] + timestamp.toISOString().split("T")[0].split("-")[2] + "_" + timestamp.toISOString().split("T")[1].split(".")[0].replace(":","").replace(":","");
+
+			var contact = document.forms["eponym_form"]["email"].value;
+			var firstName = document.forms["eponym_form"]["firstname"].value;
+			var secondName = document.forms["eponym_form"]["secondname"].value;
+
+			alert("Submission ID: " + submissionID + " | " + contact.toString() + firstName.toString() + secondName.toString());
+
+			firebase.database().ref('eponym/' + submissionID).set({
+				contact: contact,
+				firstname: firstName,
+				secondname: secondName
+			});
+		}
+	</script>
+	
+	<script>
+		function submitForm() {
+			var recipient = document.forms["confirm_form"]["email"].value;
+			var pass = confirm("MAISON ouput files will be e-mailed to " + recipient + ".");
+			
+			if (pass === true) {
+				alert("Sorry! MAISON is currently offline.");
+			}
+			else {
+				//
+			}
+		}
+	</script>
+	
 </head>
 
 <body>
-	MAISON
+	<div class="column left" style="padding-top: 25px; border-right: solid 2px black;">
+		<center>
+		<div class="project-titleblock">
+			<div class="project-title">
+				<center>M A I S O N <span style="font-weight: lighter; color: grey;">R 0 7</span></center>
+			</div>
+		</div>
+		</center>
+		
+		<center>
+		<div class="project-input">
+			<span class="project-desc-subtitle">
+				
+			</span>
+			response to the vertical axis of the tower block : <b>MAISON</b> reorients housing design along a collection of horizontal lines
+			<hr style="height:2px; border:none; color:black; background-color:black;">
+			<br>
+			<form name="data_form" style="line-height:1vw;">
+				site selection :<br>
+				<span style="font-size: .75vw; margin:0; float: left; text-align: left; display: inline-block;">
+					<input type="radio" name="site" id="site1">
+					<label for="site1">stanley isaacs</label>
+					<input type="radio" name="site" id="site2">
+					<label for="site1">sutton place</label>
+					<input type="radio" name="site" id="site3">
+					<label for="site1">stuyvesant town</label>
+				</span>
+				<br><br>
+				<input class="input-buttons" type="button" value="verify >" onClick="initialize()">
+			</form>
+			<br>
+			<span style="padding:0; margin: 0; font-size: .7vw; line-height: .1vw;">
+				constraints &gt;
+				<br>
+				changelog &gt;
+			</span>
+			<form name="confirm_form" style="position: absolute; bottom: 15px; width: 10vw;">
+				<input title="If you would like the scripts used, images generated, and supporting files sent to you, please enter your e-mail and press submit. All logs are wiped at the end of the day." class="project-input-zone" type="text" name="email" placeholder="name@site.com">
+				<br>
+				<input class="input-buttons" type="button" value="submit >" onClick="submitForm();">
+			</form>
+		</div>
+		</center>
+	</div>
+	
+	<div class="project-content">
+		<img src="../../system/maison/system documentation.png" style="object-fit: contain; max-height: 98vh;">
+	</div>
+
 </body>
 </html>
