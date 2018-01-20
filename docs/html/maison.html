@@ -25,7 +25,7 @@
 	</script>
 
 	<script>
-		function xpushEponymData() {
+		function pushMaisonData() {
 			var timestamp = new Date();
 			var submissionID = "2018_" + timestamp.toISOString().split("T")[0].split("-")[1] + timestamp.toISOString().split("T")[0].split("-")[2] + "_" + timestamp.toISOString().split("T")[1].split(".")[0].replace(":","").replace(":","");
 
@@ -45,15 +45,19 @@
 	
 	<script>
 		function submitForm() {
+			alert("Sorry! MAISON is currently offline.")
+			
+			/*
 			var recipient = document.forms["confirm_form"]["email"].value;
 			var pass = confirm("MAISON ouput files will be e-mailed to " + recipient + ".");
 			
 			if (pass === true) {
-				alert("Sorry! MAISON is currently offline.");
+				//pushMaisonData(recipient);
 			}
 			else {
 				//
 			}
+			*/
 		}
 	</script>
 	
@@ -74,7 +78,7 @@
 			<span class="project-desc-subtitle">
 				
 			</span>
-			response to the vertical axis of the tower block : <b>MAISON</b> reorients housing design along a collection of horizontal lines
+			a response to the vertical axis of the tower block : <b>MAISON</b> reorients housing design along a collection of more horizontal lines
 			<hr style="height:2px; border:none; color:black; background-color:black;">
 			<br>
 			<form name="data_form" style="line-height:1vw;">
@@ -105,8 +109,12 @@
 		</center>
 	</div>
 	
-	<div class="project-content">
+	<div class="project-content" style="overflow: hidden;">
 		<img src="../../system/maison/system documentation.png" style="object-fit: contain; max-height: 98vh;">
+		<img src="../../system/maison/archetypes.png" style="object-fit: contain; max-height: 98vh;">
+		<img src="../../system/maison/site map.png" style="object-fit: contain; max-height: 98vh;">
+		<img src="../../system/maison/precedents.png" style="object-fit: contain; max-height: 98vh;">
+		<img src="../../system/maison/axis research.png" style="object-fit: contain; max-height: 98vh;">		
 	</div>
 
 </body>

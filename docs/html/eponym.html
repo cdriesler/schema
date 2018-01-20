@@ -37,7 +37,7 @@
 			var firstName = document.getElementById("firstname").textContent;
 			var secondName = document.getElementById("secondname").textContent;
 
-			alert("Submission ID: " + submissionID + " | " + contact.toString() + firstName.toString() + secondName.toString());
+			//alert("Submission ID: " + submissionID + " | " + contact.toString() + firstName.toString() + secondName.toString());
 
 			firebase.database().ref('eponym/' + submissionID).set({
 				contact: contact,
@@ -60,10 +60,12 @@
 			var recipient = document.forms["confirm_form"]["email"].value;
 			
 			if (recipient == "") {
-				alert("Please provide an e-mail address to receive system output. All server logs are wiped at the end of the day.")
+				alert("Please provide an e-mail address to receive system output.")
+				
+				return null;
 			}
 			
-			var pass = confirm("EPONYM ouput files will be e-mailed to " + recipient + ".");
+			var pass = confirm("EPONYM ouput files will be sent from schema-dispatch@cdriesler.com to " + recipient + ".);
 			
 			if (pass === true) {
 				pushEponymData(recipient);
@@ -73,7 +75,7 @@
 			}
 		}
 		
-		function updateEponymContent() {
+		function updateEponymContent() {			
 			firstName = document.getElementById("firstname").textContent = document.forms["data_form"]["firstname"].value.replace(/\W/g, '');
 			secondName = document.getElementById("secondname").textContent = document.forms["data_form"]["secondname"].value.replace(/\W/g, '');
 			
@@ -123,7 +125,7 @@
 				changelog &gt;
 			</span>
 			<form name="confirm_form" style="position: absolute; bottom: 15px; width: 10vw;">
-				<input title="If you would like images generated and sent to you, please input your e-mail below. All logs are wiped at the end of the day." class="project-input-zone" type="text" name="email" placeholder="name@site.com">
+				<input title="" class="project-input-zone" type="text" name="email" placeholder="name@site.com">
 				<br>
 				<input class="input-buttons" type="button" value="submit >" onClick="submitForm();">
 			</form>
@@ -143,13 +145,13 @@
 			</span>
 			<br><br>
 		<span class="eponym-preview">
-			<img src="../../system/eponym/EPONYM[1]_abbott-costello.png" id="eponym_content_1" style="object-fit: scale-down;">
+			<img src="../../system/eponym/EPONYM[1]_abbott-costello.png" id="eponym_content_1" alt="system output preview">
 		</span>
 		<span class="eponym-preview">
-			<img src="../../system/eponym/EPONYM[2]_abbott-costello.png" id="eponym_content_2" style="object-fit: scale-down;">
+			<img src="../../system/eponym/EPONYM[2]_abbott-costello.png" id="eponym_content_2" alt="system output preview">
 		</span>
 		<span class="eponym-preview">
-			<img src="../../system/eponym/EPONYM[3]_abbott-costello.png" id="eponym_content_3" style="object-fit: scale-down;">
+			<img src="../../system/eponym/EPONYM[3]_abbott-costello.png" id="eponym_content_3" alt="system output preview">
 		</span>
 		</div>
 		</center>

@@ -73,7 +73,7 @@ input {
 	height: 15vw;
 	
 	outline: solid 1px black;
-	outline-offset: -2px;
+	outline-offset: -10px;
 
 	object-fit: contain;
 }
