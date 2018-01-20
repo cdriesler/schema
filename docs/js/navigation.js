@@ -34,7 +34,7 @@ function showDetailContent(index) {
 		"R007 : pratt institute / dragana zoric, critic",
 		"R004 : school for poetic computation, code narratives summer session",
 		"R008 : inspired by + adaptations on andrew heumann's plugin doodlebug",
-		"R003 : napkin manifesto / last updated 2018-12-17"
+		"R004 : napkin manifesto / last updated 2018-12-19"
 	];
 	
 	var existingText = document.getElementById("detail-bar").textContent;
