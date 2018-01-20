@@ -446,6 +446,24 @@ splash {
 	background-color: black;
 }
 
+.project-title {
+	font-family: 'Inconsolata', monospace;
+	font-weight: bold;
+	font-size: 3.8vw;
+	
+	line-height: 3.6vw;
+}
+
+.project-titleblock {
+	align-self: center;
+	vertical-align: middle;
+	
+	width: 10vw;
+	height: 12vw;
+	
+	border-bottom: solid 2px black;
+}
+
 /*
   -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);

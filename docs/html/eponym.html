@@ -24,7 +24,7 @@
 	</script>
 
 	<script>
-		function pushEponymData() {
+		function xpushEponymData() {
 			var timestamp = new Date();
 			var submissionID = "2018_" + timestamp.toISOString().split("T")[0].split("-")[1] + timestamp.toISOString().split("T")[0].split("-")[2] + "_" + timestamp.toISOString().split("T")[1].split(".")[0].replace(":","").replace(":","");
 
@@ -42,30 +42,70 @@
 		}
 	</script>
 	
+	<script>
+		function submitForm() {
+			var pass = confirm("Do the thing?");
+			
+			if (pass === true) {
+				alert("Will do the thing.");
+			}
+		}
+	</script>
+	
 </head>
 
 <body>
-	<div class="column left" style="padding-top: 25px; outline: solid black 2px; outline-offset: -20px;">
-		<span class="project-title">
-			<center>content?</center>
-		</span>
+	<div class="column left" style="padding-top: 25px; border-right: solid 2px black;">
+		<center>
+		<div class="project-titleblock">
+			<div class="project-title">
+				<center>E P O N Y M <span style="font-weight: lighter; color: grey;">R 0 4</span></center>
+			</div>
+		</div>
+		</center>
 		
 		<center>
-			<form name="eponym_form" onSubmit="pushEponymData()">
-				<input type="text" name="email" placeholder="delivery e-mail">
+		<div class="project-input">
+			<span class="project-desc-subtitle">
+				
+			</span>
+			adaptations on an exercise in learning natural language processing : <b>EPONYM</b> will generate a "conflict field" of letters from names
+			<hr style="height:2px; border:none; color:black; background-color:black;">
+			<br>
+			<form name="data_form" onSubmit="submitForm()" style="line-height:1vw;">
+				first name :
+				<input class="project-input-zone" type="text" name="firstname" placeholder="" onMouseOver="this.style.background-color='grey'">
 				<br><br>
-				<input type="text" name="firstname" placeholder="name or word">
+				second name :
+				<input class="project-input-zone" type="text" name="secondname" placeholder="" style="margin-bottom:0; padding-bottom: 0;" onMouseOver="this.style.background-color='grey'">
 				<br><br>
-				<input type="text" name="secondname" placeholder="another">
-				<br><br>
-				<input type="submit" value="submit">
+				<input class="input-buttons" type="submit" value="verify >">
 			</form>
+			<br>
+			<span style="padding:0; margin: 0; font-size: .7vw; line-height: .1vw;">
+				constraints &gt;
+				<br>
+				changelog &gt;
+			</span>
+			<hr style="height:2px; border:none; color:black; background-color:black;">
+			<form name="confirm_form" onSubmit="submitForm()" style="position: absolute; bottom: 15px; width: 10vw;">
+				<input title="If you would like images generated and sent to you, please input your e-mail below. All logs are wiped at the end of the day." class="project-input-zone" type="text" name="email" placeholder="name@site.com">
+				<br>
+				<input class="input-buttons" type="submit" value="submit >" onClick="submitForm();">
+			</form>
+		</div>
 		</center>
 	</div>
 	
-	<div class="project-content" style="padding-top: 40vh;">
-		<div class="adaptive-project-text" id="firstname">
-		
+	<div class="project-content">
+		<div class="eponym-phrase">
+			<span id="firstname">
+			/////
+			</span>
+			&nbsp;+&nbsp;
+			<span id="secondname">
+			/////
+			</span>
 		</div>
 	</div>
 
